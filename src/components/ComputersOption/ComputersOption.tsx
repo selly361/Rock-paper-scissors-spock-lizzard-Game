@@ -17,19 +17,21 @@ import { useAppSelector } from "app/hooks";
 function ComputersOption() {
   const computerChoice = useAppSelector((state) => state.computerChoice);
 
-  return computerChoice ? (
+  return (
     <Container>
       <Title>THE HOUSE PICKED</Title>
-      <OuterCircle darkShade={optionColors[computerChoice].darkShade}>
-        <StyledOption lightShade={optionColors[computerChoice].lightShade}>
-          <ShadeCircle>
-            <InnerCircle>{icons[computerChoice]}</InnerCircle>
-          </ShadeCircle>
-        </StyledOption>
-      </OuterCircle>
+      {computerChoice ? (
+        <OuterCircle darkShade={optionColors[computerChoice].darkShade}>
+          <StyledOption lightShade={optionColors[computerChoice].lightShade}>
+            <ShadeCircle>
+              <InnerCircle>{icons[computerChoice]}</InnerCircle>
+            </ShadeCircle>
+          </StyledOption>
+        </OuterCircle>
+      ) : (
+        <Loading />
+      )}
     </Container>
-  ) : (
-      <Loading />
   );
 }
 
