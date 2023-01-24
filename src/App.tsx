@@ -1,58 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { LizardIcon, PaperIcon, RockIcon, ScissorsIcon, SpocksIcon } from 'assets'
+import React, { Fragment } from 'react'
+
+import  { Choice } from 'types/GameState'
+import { GlobalStyles } from 'global/GlobalStyles'
+import { Main } from 'components'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+    <Fragment>
+      <GlobalStyles />
+      <Main /> 
+    </Fragment>
+  )
 }
 
-export default App;
+
+
+
+export const icons = {
+  [Choice.Lizard]: <LizardIcon />,
+  [Choice.Paper]: <PaperIcon />,
+  [Choice.Rock]: <RockIcon />,
+  [Choice.Scissors]: <ScissorsIcon />,
+  [Choice.Spock]: <SpocksIcon />
+}
+
+export default App
