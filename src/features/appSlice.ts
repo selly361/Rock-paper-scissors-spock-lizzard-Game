@@ -5,7 +5,7 @@ import { generateComputerMove } from "utils/generateComputerMove";
 
 const initialState: GameState = {
   started: false,
-  displayRulesModal: true,
+  displayRulesModal: false,
   playerChoice: undefined,
   computerChoice: undefined,
   result: undefined,

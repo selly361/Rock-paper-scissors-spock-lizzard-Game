@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledMain = styled.main`
-  min-height: 800px;
+  min-height: 100vh;
   width: 100vw;
   background: radial-gradient(
     134.34% 134.34% at 50% 0%,

@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     width: 100vw;
     overflow-x: hidden;
-    min-height: 800px;
+    min-height: 100vh;
 
   }
 
