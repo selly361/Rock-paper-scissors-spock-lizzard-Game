@@ -6,11 +6,12 @@ import React from "react";
 import { icons } from "App";
 import { optionColors } from "global/optionColors";
 import { useAppSelector } from "app/hooks";
+import Results from "components/Results/Results";
 
 function Main() {
   const options = Object.values(Choice);
 
-  const { started } = useAppSelector((state) => state);
+  const { started, computerChoice } = useAppSelector((state) => state);
   return (
     <StyledMain>
       <Header />
@@ -28,8 +29,9 @@ function Main() {
       )}
 
       {started && (
-        <ResultsContainer>
+        <ResultsContainer className={computerChoice ? "active" : ''}>
           <PlayersOption />
+          {computerChoice && <Results />}
           <ComputersOption />
         </ResultsContainer>
       )}

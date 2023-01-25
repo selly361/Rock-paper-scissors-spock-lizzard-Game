@@ -57,4 +57,6 @@ export const Title = styled.h4`
   letter-spacing: 3px;
   color: #ffffff;
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+  min-width: 100%;
+  text-align: center;
 `;

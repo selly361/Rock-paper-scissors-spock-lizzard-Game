@@ -19,7 +19,7 @@ function ComputersOption() {
 
   return (
     <Container>
-      <Title>THE HOUSE PICKED</Title>
+      <Title>COMPUTER PICKED</Title>
       {computerChoice ? (
         <OuterCircle darkShade={optionColors[computerChoice].darkShade}>
           <StyledOption lightShade={optionColors[computerChoice].lightShade}>

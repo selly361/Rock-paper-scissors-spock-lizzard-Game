@@ -31,4 +31,9 @@ export const ResultsContainer = styled.fieldset`
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+
+  & > div {
+    width: 293px;
+  }
+
 `;
